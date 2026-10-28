@@ -1,0 +1,306 @@
+* { /* Todos os elementos */
+    margin: 0; /* Espaçamento externo */
+    padding: 0; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui bordas e espaçamento */
+    font-family: Arial, sans-serif; /* Fonte da página */
+} /* Fim do bloco */
+
+body { /* Fundo da página */
+    min-height: 100vh; /* Cobre a altura da tela */
+    background-image: url("../img/Fundo Esportivo com Rochas e Arcos Laranja.png"); /* Imagem de fundo */
+    background-size: cover; /* Preenche a tela */
+    background-position: center top; /* Posição do fundo */
+    background-repeat: no-repeat; /* Sem repetição */
+} /* Fim do bloco */
+
+.logo { /* Logo */
+    width: 192px; /* Largura */
+    max-width: 100%; /* Largura máxima */
+    height: auto; /* Altura */
+    display: block; /* Exibe como bloco */
+} /* Fim do bloco */
+
+header { /* Cabeçalho */
+    background-color: transparent; /* Mostra o fundo da página */
+    display: flex; /* Itens lado a lado */
+    align-items: center; /* Alinha os elementos */
+    justify-content: flex-end; /* Alinha à direita */
+    min-height: 72px; /* Altura mínima */
+    height: auto; /* Altura */
+    padding: 12px clamp(20px, 3vw, 80px); /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui bordas e espaçamento */
+    gap: 24px; /* Espaço entre os itens */
+    flex-wrap: wrap; /* Permite quebrar linha */
+
+    & .logo { /* Logo do cabeçalho */
+        cursor: pointer; /* Cursor de mão */
+        margin-right: auto; /* Empurra o menu à direita */
+    } /* Fim do bloco */
+
+    & .usuario { /* Botão de conta */
+        display: grid; /* Layout em grade */
+        place-items: center; /* Centraliza o conteúdo */
+        flex: 0 0 34px; /* Tamanho fixo no flex */
+        height: 34px; /* Altura */
+        border: none; /* Sem borda */
+        border-radius: 50%; /* Cantos arredondados */
+        background: #fd3f0d; /* Laranja da logo */
+        cursor: pointer; /* Cursor de mão */
+
+        & img { /* Imagem */
+            display: block; /* Exibe como bloco */
+            width: 20px; /* Largura */
+            height: 22px; /* Altura */
+            object-fit: contain; /* Preserva a imagem inteira */
+        } /* Fim do bloco */
+    } /* Fim do bloco */
+
+    & .cadastro { /* Botão compar */
+        flex-shrink: 0; /* Impede encolher */
+        width: 161px; /* Largura */
+        height: 37px; /* Altura */
+        background: #242323; /* Fundo cinza queimado */
+        color: #fff; /* Cor do texto */
+        border: none; /* Sem borda */
+        border-radius: 10px; /* Cantos arredondados */
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: 700; /* Peso da fonte */
+        cursor: pointer; /* Cursor de mão */
+
+        &:hover { /* Efeito ao passar o mouse */
+            background: #403d3b; /* Fundo cinza mais escuro */
+        } /* Fim do bloco */
+    } /* Fim do bloco */
+
+    & .usuario:focus-visible, /* Foco no botão de conta */
+    & .cadastro:focus-visible { /* Foco no botão compar */
+        outline: 2px solid ; /* Contorno de foco */
+        outline-offset: 4px; /* Distância do contorno */
+    } /* Fim do bloco */
+} /* Fim do bloco */
+
+nav ul { /* Lista do menu */
+    display: flex; /* Itens lado a lado */
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 12px; /* Espaço entre os itens */
+    list-style-type: none; /* Remove os marcadores */
+    padding: 0; /* Espaçamento interno */
+    margin: 0; /* Espaçamento externo */
+
+    & a { /* Links do menu */
+        color: #000; /* Cor do texto */
+        text-decoration: none; /* Sem sublinhado */
+        font-size: 14px; /* Tamanho da fonte */
+        display: inline-block; /* Bloco na mesma linha */
+        padding: 10px; /* Espaçamento interno */
+        border: none; /* Sem borda */
+        outline: none; /* Contorno de foco */
+        border-radius: 10px; /* Cantos arredondados */
+        transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease; /* Suaviza os efeitos */
+
+        &:hover { /* Efeito ao passar o mouse */
+            cursor: pointer; /* Cursor de mão */
+            color: white; /* Cor do texto */
+            background-color:#fd3f0d; /* Cor de fundo */
+            transform: scale(1.1); /* Aumenta o link */
+        } /* Fim do bloco */
+
+        &:focus-visible { /* Foco pelo teclado */
+            outline: 2px solid #5f69bf; /* Contorno de foco */
+            outline-offset: 2px; /* Distância do contorno */
+        } /* Fim do bloco */
+    } /* Fim do bloco */
+} /* Fim do bloco */
+
+
+main { /* Conteúdo principal */
+    width: 86%; /* Largura */
+    max-width: 1200px; /* Largura máxima */
+    margin: 80px auto; /* Espaço e centralização */
+} /* Fim do bloco */
+
+.hero { 
+    display: grid; /* Layout em grade */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* Duas colunas */
+    align-items: center; /* Alinhamento vertical */
+    gap: 56px; /* Espaço entre colunas */
+} /* Fim do bloco */
+
+.hero-conteudo { /* Textos à esquerda */
+    display: flex; /* Organiza os textos */
+    flex-direction: column; /* Itens em coluna */
+    align-items: flex-start; /* Alinha à esquerda */
+    gap: 24px; /* Espaço entre os textos */
+} /* Fim do bloco */
+
+.hero-tag { /* Chamada inicial */
+    color: #fd3f0d; /* Laranja da logo */
+    font-size: 13px; /* Tamanho da fonte */
+    font-weight: 700; /* Negrito */
+    letter-spacing: 2px; /* Espaço entre letras */
+} /* Fim do bloco */
+
+.hero-conteudo h1 { /* Título principal */
+    font-size: clamp(38px, 4.5vw, 64px); /* Tamanho adaptável */
+    font-weight: 900; /* Negrito forte */
+    line-height: 1.1; /* Altura da linha */
+    color: #242323; /* Texto escuro */
+} /* Fim do bloco */
+
+.hero-conteudo h1 span { /* Palavra em destaque */
+    color: #fd3f0d; /* Laranja da logo */
+} /* Fim do bloco */
+
+.hero-conteudo > p { /* Descrição */
+    max-width: 460px; /* Largura máxima */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaço entre linhas */
+    color: #55514e; /* Texto cinza */
+} /* Fim do bloco */
+
+.hero-conteudo > a { /* Link da coleção */
+    display: inline-block; /* Formato de botão */
+    padding: 15px 24px; /* Espaçamento interno */
+    background: #fd3f0d; /* Fundo laranja */
+    color: #fff; /* Texto branco */
+    border-radius: 10px; /* Cantos arredondados */
+    text-decoration: none; /* Sem sublinhado */
+    font-weight: 700; /* Negrito */
+} /* Fim do bloco */
+
+.hero-conteudo > a:hover { /* Efeito ao passar o mouse */
+    background: #dc3105; /* Laranja mais escuro */
+} /* Fim do bloco */
+
+.hero-conteudo > a:focus-visible { /* Foco pelo teclado */
+    outline: 2px solid #242323; /* Contorno escuro */
+    outline-offset: 4px; /* Distância do contorno */
+} /* Fim do bloco */
+
+.beneficios { /* Lista de benefícios */
+    display: grid; /* Itens em coluna */
+    gap: 10px; /* Espaço entre itens */
+    padding-left: 18px; /* Espaço dos marcadores */
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+    color: #55514e; /* Texto cinza */
+} /* Fim do bloco */
+
+.beneficios li::marker { /* Marcadores da lista */
+    color: #fd3f0d; /* Laranja da logo */
+} /* Fim do bloco */
+
+.hero-produto { /* Produto à direita */
+    padding-top: 37px; /* Preserva a posição do tênis */
+    position: relative; /* Referência da sombra */
+    isolation: isolate; /* Sombra atrás do tênis */
+    min-width: 0; /* Evita transbordamento */
+    text-align: center; /* Centraliza os textos */
+} /* Fim do bloco */
+
+.hero-produto > p { /* Frase manuscrita */
+    position: absolute; /* Posição da frase */
+    top: 18px; /* Altura da frase */
+    left: -36px; /* Ao lado do tênis */
+    z-index: 2; /* Acima do fundo */
+    width: 220px; /* Largura do texto */
+    margin: 0; /* Sem margem extra */
+    color: #242323; /* Tinta escura */
+    font-family: "Segoe Script", "Segoe Print", cursive; /* Letra manuscrita */
+    font-size: clamp(24px, 2.2vw, 32px); /* Tamanho adaptável */
+    font-weight: 400; /* Traço leve */
+    line-height: 1; /* Linhas próximas */
+    white-space: nowrap; /* Mantém as três linhas */
+    text-align: center; /* Centraliza as linhas */
+    transform: rotate(-13deg); /* Inclinação da escrita */
+} /* Fim do bloco */
+
+.hero-produto > p::after { /* Traço sob a frase */
+    content: ""; /* Cria o desenho */
+    display: block; /* Abaixo do texto */
+    width: 126px; /* Largura do traço */
+    height: 36px; /* Altura do traço */
+    margin: 6px auto 0; /* Centraliza o traço */
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20140%2040%22%3E%3Cpath%20d%3D%22M132%206C92%204%2049%2010%2012%2027M31%2017L12%2027L35%2029%22%20fill%3D%22none%22%20stroke%3D%22%23242323%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"); /* Seta desenhada */
+    background-repeat: no-repeat; /* Sem repetição */
+    background-size: contain; /* Ajusta o desenho */
+} /* Fim do bloco */
+
+.hero-tenis { /* Apoio do tênis na pedra */
+    width: 100%; /* Largura da imagem */
+    max-width: 560px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o tênis */
+    transform: rotate(-10deg); /* Mantém a inclinação */
+    filter: drop-shadow(2px 8px 3px rgba(0, 0, 0, 0.95)) drop-shadow(12px 22px 14px rgba(0, 0, 0, 0.65)); /* Sombra sobre a pedra */
+} /* Fim do bloco */
+
+.hero-produto img { /* Imagem do tênis */
+    display: block; /* Exibe como bloco */
+    width: 100%; /* Ocupa a coluna */
+    max-width: 560px; /* Largura máxima */
+    height: auto; /* Preserva a proporção */
+    margin: 0 auto; /* Centraliza a imagem */
+    clip-path: polygon(71.88% 0.00%, 75.52% 1.76%, 79.04% 7.62%, 87.50% 29.10%, 87.11% 32.62%, 81.64% 40.04%, 88.15% 33.59%, 88.80% 30.86%, 88.54% 34.38%, 84.90% 39.65%, 87.76% 36.33%, 89.32% 32.23%, 91.02% 38.48%, 88.67% 43.75%, 91.15% 40.63%, 91.54% 38.28%, 93.23% 44.73%, 92.06% 50.00%, 85.29% 57.62%, 56.51% 83.98%, 44.92% 92.38%, 34.64% 97.46%, 23.83% 100.00%, 15.63% 99.61%, 11.33% 97.07%, 9.64% 93.75%, 9.38% 86.52%, 12.76% 89.06%, 19.66% 89.45%, 34.38% 84.57%, 50.65% 74.41%, 57.42% 67.77%, 63.54% 59.77%, 63.67% 58.79%, 57.03% 66.99%, 49.48% 74.22%, 32.55% 84.38%, 19.79% 88.48%, 12.24% 88.09%, 10.16% 86.13%, 10.29% 80.86%, 12.11% 76.17%, 19.53% 68.55%, 25.52% 61.33%, 38.41% 35.55%, 40.49% 26.76%, 45.83% 12.50%, 48.05% 11.13%, 53.13% 11.52%, 59.24% 14.65%, 61.07% 17.58%, 63.80% 12.89%, 66.02% 4.69%, 67.71% 2.34%); /* Recorta o fundo branco */
+} /* Fim do bloco */
+
+.produto-info { /* Cartão do produto */
+    position: relative; /* Posição do cartão */
+    z-index: 1; /* Acima da pedra */
+    display: grid; /* Organiza os dados */
+    grid-template-columns: minmax(0, 1fr) 52px; /* Texto e seta */
+    gap: 6px 24px; /* Espaço entre os itens */
+    width: 300px; /* Largura do cartão */
+    max-width: 100%; /* Cabe em telas menores */
+    margin: -18px 0 0 auto; /* Encaixa à direita */
+    padding: 20px 24px; /* Espaçamento interno */
+    background: linear-gradient(135deg, #28292d, #18191d); /* Fundo escuro */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Borda suave */
+    border-radius: 28px; /* Cantos arredondados */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35); /* Sombra do cartão */
+    text-align: left; /* Texto à esquerda */
+} /* Fim do bloco */
+
+.produto-info h2 { /* Nome do produto */
+    grid-column: 1; /* Coluna do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso normal */
+    line-height: 1.4; /* Altura da linha */
+    color: #f5f5f7; /* Texto claro */
+} /* Fim do bloco */
+
+.produto-info p { /* Preço em destaque */
+    grid-column: 1; /* Coluna do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 700; /* Negrito */
+    line-height: 1.2; /* Altura da linha */
+    color: #fff; /* Texto branco */
+} /* Fim do bloco */
+
+.produto-info::after { /* Seta do cartão */
+    content: "→"; /* Desenha a seta */
+    grid-column: 2; /* Coluna da seta */
+    grid-row: 1 / 3; /* Ao lado dos textos */
+    align-self: center; /* Centraliza na vertical */
+    display: grid; /* Centraliza a seta */
+    place-items: center; /* Alinhamento central */
+    width: 52px; /* Largura do círculo */
+    height: 52px; /* Altura do círculo */
+    border-radius: 50%; /* Formato circular */
+    background: linear-gradient(135deg, #ff642d, #f53b0c); /* Laranja da logo */
+    color: #fff; /* Seta branca */
+    font-size: 28px; /* Tamanho da seta */
+    line-height: 1; /* Altura da linha */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); /* Brilho suave */
+} /* Fim do bloco */
+
+@media (max-width: 768px) { /* Telas menores */
+    main { /* Conteúdo principal */
+        width: calc(100% - 40px); /* Margens laterais */
+        margin: 40px auto; /* Espaçamento menor */
+    } /* Fim do bloco */
+
+    .hero { /* Seção de destaque */
+        grid-template-columns: minmax(0, 1fr); /* Uma coluna */
+        gap: 40px; /* Espaço entre os blocos */
+    } /* Fim do bloco */
+} /* Fim da adaptação */
